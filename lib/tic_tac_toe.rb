@@ -22,7 +22,11 @@ def input_to_index(input)
   index = input - 1
 end
 
+<<<<<<< HEAD
 def move(board, index, character)
+=======
+def move(board, index, character = "X")
+>>>>>>> bd96d2c7e1c452135ded6b4fdc691b6f70447325
   def update_array_at_with(array, index, value)
     array[index] = value
   end
@@ -52,6 +56,7 @@ def valid_move?(board, index)
 end
 
 def turn_count(board)
+<<<<<<< HEAD
   x = 0
   y = 0
   while x < board.length
@@ -71,6 +76,9 @@ def current_player(board)
   else
     return "X"
   end
+=======
+
+>>>>>>> bd96d2c7e1c452135ded6b4fdc691b6f70447325
 end
 
 def turn(board)
@@ -78,7 +86,11 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
+<<<<<<< HEAD
     move(board, index, current_player(board))
+=======
+    move(board, index)
+>>>>>>> bd96d2c7e1c452135ded6b4fdc691b6f70447325
     display_board(board)
   else
     turn(board)
@@ -126,6 +138,7 @@ def winner(board)
 end
 
 def play(board)
+<<<<<<< HEAD
   while !over?(board)
     turn(board)
   end
@@ -136,5 +149,11 @@ def play(board)
     else
       puts "Cat's Game!"
     end
+=======
+  counter = 0
+  until counter == 9
+    turn(board)
+    counter += 1
+>>>>>>> bd96d2c7e1c452135ded6b4fdc691b6f70447325
   end
 end
